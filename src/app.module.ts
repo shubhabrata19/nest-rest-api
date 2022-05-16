@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersController } from './users/users.controller';
-import { UsersService } from './users/users.service';
+// import { UsersController } from './users/users.controller';
+// import { UsersService } from './users/users.service';
 import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 //import { DotenvConfigOptions } from 'dotenv';
@@ -13,7 +13,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       'mongodb+srv://sghosh:sghosh19@cluster0-sdw5r.mongodb.net/NestjsDemo',
     ),
   ],
-  controllers: [AppController, UsersController],
-  providers: [AppService, UsersService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
